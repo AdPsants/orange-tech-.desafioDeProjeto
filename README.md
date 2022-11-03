@@ -1,2 +1,6 @@
-# orange-tech-.desafioDeProjeto
-Desafio de projeto git básico do bootcamp Orange Tech+ da Dio.
+# Repositório de desafio de projeto git básico do bootcamp Orange Tech+ da Dio.
+ 
+orange-tech-.desafioDeProjeto
+
+Links úteis
+
