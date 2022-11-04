@@ -7,11 +7,10 @@ Você terá 3 variaveis. Sendo elas:
 
 Imprima no console o valor que será gasto de para realizar essa viagem
 */
-const precoCombustivel = 5;
-const gastoCombustivelKm = 0.1;
+const precoCombustivel = 5.79;
+const kmPorLitros = 10;
+const distanciaKm = 100;
 
-let distanciaViagem = 40;
+const litrosConsumido = (distanciaKm / kmPorLitros) * precoCombustivel;
 
-let gastoViagem = (gastoCombustivelKm * distanciaViagem) * precoCombustivel;
-
-console.log("O custo da viagem é de R$ " + gastoViagem + ",00");
+console.log("O custo da viagem é de R$ " + litrosConsumido );
