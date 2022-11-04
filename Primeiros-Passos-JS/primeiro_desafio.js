@@ -7,10 +7,12 @@ Você terá 3 variaveis. Sendo elas:
 
 Imprima no console o valor que será gasto de para realizar essa viagem
 */
+
 const precoCombustivel = 5.79;
-const kmPorLitros = 10;
-const distanciaKm = 100;
+const kmPorLitros = 12;
+const distanciaKm = 1590;
 
 const litrosConsumido = (distanciaKm / kmPorLitros) * precoCombustivel;
 
-console.log("O custo da viagem é de R$ " + litrosConsumido );
+console.log("O custo da viagem é de R$ " + litrosConsumido.toFixed(2));
+
