@@ -29,9 +29,8 @@
 
 ### Metas
 
-- [] 1° Desefio de Projeto até 03/11/2022
-
-Entrega do 1°
+- [x] 1° Desefio de Projeto até 03/11/2022
+- [] Primeiros Passos com JS > 3h: 03/11/2022 até 04/11/2022
 
 
 ### Links úteis
