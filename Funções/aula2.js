@@ -29,7 +29,6 @@ function aplicarDesconto(precoEtiqueta, desconto){
 function aplicarJuros(precoEtiqueta, juros){
     return (precoEtiqueta + (precoEtiqueta * (juros / 100)));
 }
-
 function formasDePagamento(formaDePagamento){
     if(formaDePagamento === 1){
         console.log(aplicarDesconto(100, 10)); 
@@ -42,3 +41,34 @@ function formasDePagamento(formaDePagamento){
     }
 }
 formasDePagamento(4);
+
+/* 
+    1) Faça um algorítimo que dado as 3 notas tiradas por um aluno em um semestre da faculdade calcule e imprima a sua média e a sua classificação conforme a tabela abaixo.
+    Média = (nota 1 + nota 2 + nota 3) / 3;
+    Classificação:
+    - Média menor que 5, reprovação;
+    - Média entre 5 e 7, recuperação;
+    - Média acima de 7, passou de semestre;
+*/
+
+// Função para cálculo da média
+function notasAluno(nota1, nota2, nota3){
+    return  media = (nota1 + nota2 + nota3) / 3;
+}
+// Chamando a função e passando as notas como parâmetro
+notasAluno(4, 3, 3);
+// Fazendo as comparações da média e imprimindo o resultado
+(function resultadoFinal(){
+
+    if(media < 5){
+        console.log("Reprovado");
+    } else if(media >= 5 && media <= 7){
+        console.log("Recuperação");
+    } else{
+        console.log("Aprovado");
+    }
+})();
+
+
+
+
