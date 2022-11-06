@@ -26,6 +26,9 @@ function sayMyName(name){
 function aplicarDesconto(precoEtiqueta, desconto){
     return (precoEtiqueta - (precoEtiqueta * (desconto / 100)));
 }
+function aplicarJuros(precoEtiqueta, juros){
+    return (precoEtiqueta + (precoEtiqueta * (juros / 100)));
+}
 
 function formasDePagamento(formaDePagamento){
     if(formaDePagamento === 1){
@@ -35,7 +38,7 @@ function formasDePagamento(formaDePagamento){
     } else if(formaDePagamento === 3){
         console.log(aplicarDesconto(100, 0));
     } else {
-        console.log(aplicarDesconto(100, -10));
+        console.log(aplicarJuros(100, 10));
     }
 }
 formasDePagamento(4);
