@@ -5,7 +5,7 @@
 
 ### Inserir um comando no editor do Github
  
-``console.log(""Olá Mundo)``
+``console.log("Olá Mundo");``
 
 ### Criar uma lista
 
