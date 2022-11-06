@@ -23,15 +23,19 @@ function sayMyName(name){
     3 Em duas vezes, preço normal de etiqueta sem juros;
     4 Acima de duas vezes, preço normal de etiqueta mais juros de 10%;
 */
-function aplicarDesconto(formaDePagamento, precoEtiqueta){
+function aplicarDesconto(precoEtiqueta, desconto){
+    return (precoEtiqueta - (precoEtiqueta * (desconto / 100)));
+}
+
+function formasDePagamento(formaDePagamento){
     if(formaDePagamento === 1){
-        return precoEtiqueta += - precoEtiqueta * 0.1; 
+        console.log(aplicarDesconto(100, 10)); 
     } else if(formaDePagamento === 2){
-        return precoEtiqueta += - precoEtiqueta * 0.15;
+        console.log(aplicarDesconto(100, 15));
     } else if(formaDePagamento === 3){
-        return precoEtiqueta;
+        console.log(aplicarDesconto(100, 0));
     } else {
-        return precoEtiqueta += + precoEtiqueta * 0.1;
+        console.log(aplicarDesconto(100, -10));
     }
 }
-console.log(aplicarDesconto(4, 100));
+formasDePagamento(4);
