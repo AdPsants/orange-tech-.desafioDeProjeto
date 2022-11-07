@@ -50,16 +50,17 @@ class Carro{
         this.litrosPorKm = litrosPorKm;
     }
 
-
+    valorGasto(totalKmPercorrido, precoCombustível){
+        console.log((totalKmPercorrido * hb20.litrosPorKm) * precoCombustível);
+    }
 }
 
-function valorGasto(totalKmPercorrido, precoCombustível){
-    return hb20.litrosPorKm;
-}
 
-const hb20 = new Carro('hiunday', 'vermelho', 10);
+const hb20 = new Carro('Hiunday', 'Vermelho', 1/10);
 
-valorGasto(hb20);
+const ferrari = new Carro("Ferrari", "Preta", 1/15);
+
+hb20.valorGasto(100, 5.79);
 
 
 
