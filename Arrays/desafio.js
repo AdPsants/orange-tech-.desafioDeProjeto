@@ -1,6 +1,12 @@
 /*
     1) Crie um programa que dado um número imprima a sua tabuada.
+*/
 
+for(let x = 1; x <= 10; x++){
+   console.log(x + ' X 5 = ' + x * 5);
+}
+
+/*
 2) Crie um programa que seja capaz de percorrer uma lista de números e imprima cada número Par encontrado.
 
 3) Faça um programa que dado uma lista de nomes imprima os nomes que começem com a letra "V".
