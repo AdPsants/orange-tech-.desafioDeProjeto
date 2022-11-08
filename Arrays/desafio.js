@@ -24,7 +24,7 @@ for(let i = 0; i < numeros.length; i++){
 /*
    3) Faça um programa que dado uma lista de nomes imprima os nomes que começem com a letra "V".
 */
-
+/*
 let nomes = ['Vanderson', 'Adriano', 'Vitória', 'Venâncio', 'Victor', 'Eduardo'];
 
 for(let i = 0; i < nomes.length; i++){
@@ -34,11 +34,22 @@ for(let i = 0; i < nomes.length; i++){
       console.log(nome);
    }
 }
+*/
 
 
 /*
 4) Faça um programa que preencha uma lista com todos os números pares contidos no intervalo de 10 a 50;
+*/
+let numeros = [];
 
+for(let i = 10; i <= 50; i++){
+   if(i % 2 === 0){
+      numeros.push(i);
+      console.log(numeros);
+   }
+}
+
+/*
 5) Dado uma lista com as médias tiradas pelos alunos. Imprima todas as médias que ficaram de recuperação (média < 5).
    Ex de lista = [2, 7, 3, 8, 10, 4]
 
