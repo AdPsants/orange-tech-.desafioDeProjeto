@@ -44,7 +44,7 @@ let numero = [];
 for(let i = 10; i <= 50; i++){
    if(i % 2 === 0){
       numero.push(i);
-      console.log(numero);
+      console.log(numeros);
    }
 }
 
@@ -70,6 +70,15 @@ for(let i = 0; i < lista.length; i++) {
 
 const listaDeNotas = [2, 7, 3, 8, 10, 4];
 
-const maiorNota = Math.max.apply(null, listaDeNotas);
+let maiorNota = 0;
+
+for(let i = 0; i < listaDeNotas.length; i++) {
+   const nota = listaDeNotas[i];
+
+   if(nota > maiorNota){
+      maiorNota = nota;
+   }
+}
+
 
 console.log(maiorNota);
