@@ -80,5 +80,4 @@ for(let i = 0; i < listaDeNotas.length; i++) {
    }
 }
 
-
 console.log(maiorNota);
