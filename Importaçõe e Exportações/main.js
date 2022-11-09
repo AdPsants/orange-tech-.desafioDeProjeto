@@ -1,6 +1,6 @@
 
 
- const { gets, print } = require('./funçoes-auxiliares');
+ const { gets, print } = require('./funcoes-auxiliares');
 
  /*
     Uma sala contem 5 alunos e para cada aluno foi sorteado um núero de 1 -100.
@@ -17,5 +17,26 @@
     98
 */
 const numerosSorteados = [];
+let maiorNumero = 0;
 
-console.log(gets());
+for(let i = 0; i < 5; i++){
+    const numero = gets();
+    
+    if(numero > maiorNumero){
+        maiorNumero = numero;
+    }
+}
+
+print(maiorNumero);
+
+
+/*
+for(let i = 0; i < numerosSorteados.length; i++){
+    const numero = numerosSorteados[i];
+
+    if(numero > maiorNumero){
+        maiorNumero = numero;
+    }
+}
+print(maiorNumero);
+*/
