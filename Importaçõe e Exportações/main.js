@@ -16,6 +16,9 @@
     Saída:
     98
 */
+
+// Nos exercícios o primeiro elemento do array será o numero de eleentos contidos nele.
+
 const numerosSorteados = [];
 let maiorNumero = 0;
 

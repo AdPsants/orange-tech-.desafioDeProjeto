@@ -1,0 +1,4 @@
+node_modules/
+*spec.js
+*json
+dados.js
