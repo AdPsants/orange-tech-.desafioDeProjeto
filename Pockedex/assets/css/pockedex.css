@@ -1,27 +1,3 @@
-*{
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #F6F8FC;
-}
-.content {
-    /*hetight: 100vh;
-    width: 100vh;
-    */
-    padding: 1rem;
-    background-color: #fff;
-}
-
-@media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
-}
 
 .pokemons {
     display: grid;
