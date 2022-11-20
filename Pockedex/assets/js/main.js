@@ -8,25 +8,16 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li id="datailPokemon" class="pokemon ${pokemon.type}" onclick="closePokemon()">
+        <li id="datailPokemon" class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
-            <div class="detail">
-                <ol class="types">
+            <div id="detail" class="detail" onclick="sumir()">
+                <ol class="types" >
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
                 <img src="${pokemon.photo}"
                      alt="${pokemon.name}">
             </div>
-        </li>
-        <li>
-            <div class="">
-                <ol class="">
-                    <span style="display: block;">"Altura: ${pokemon.height}" </span>
-                    <span style="display: block;">"Luta:  ${pokemon.weight}"</span>
-                    <span>"Habilidades:  ${pokemon.abilities}"</span>
-                </ol>
-         </div>
         </li>
     `
 }
@@ -53,27 +44,55 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
-/*
-function closePokemon (pokemon) {
-    return `
-        <li id="datailPokemon" class="pokemon ${pokemon.type}" >
-            <span class="number">#${pokemon.number}</span>
-            <span class="name">${pokemon.name}</span>
-            <div class="detail">
-                <ol class="types">
-                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-                </ol>
-                <img src="${pokemon.photo}"
-                    alt="${pokemon.name}">
-            </div>
-            <div class="">
-                <ol class="">
-                   <span>"Altura: ${pokemon.height}" </span>
-                   <span>"Luta:  ${pokemon.weight}"</span>
-                    <span>"Habilidades:  ${pokemon.abilities}"<?span>
-                </ol>
-            </div>
-        </li>
-    `
+
+function sumir(){
+    function convertPokemonFullToLi (pokemon) {
+        return `
+            <li class="${pokemon.type} abilities" >
+                <span class="number">#${pokemon.number}</span>
+                <span>${pokemon.name}</span>
+                <div>
+                    <ol>
+                        ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                    </ol>
+                    <img src="${pokemon.photo}" alt="${pokemon.name}">
+                </div>
+                <div class="">
+                    <ol class="">
+                       <span>Altura: ${pokemon.height} </span>
+                       <span>Luta:  ${pokemon.weight}</span>
+                        <span>Habilidades:  ${pokemon.abilities}<?span>
+                    </ol>
+                </div>
+            </li>
+        `
+    }
+    
+    function loadPokemonAbilities(offset, limit) {
+        pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
+            const newsHtml = pokemons.map(convertPokemonFullToLi).join('')
+            pokemonList.innerHTML += newsHtml
+        })
+    }
+    
+    loadPokemonAbilities(offset, limit)
 }
+/*
+loadMoreButton.addEventListener('click', () => {
+    offset += limit
+    const qtdRecordsWithNexPage = offset + limit
+
+    if (qtdRecordsWithNexPage >= maxRecords) {
+        const newLimit = maxRecords - offset
+        loadPokemonAbilities(offset, newLimit)
+
+        loadMoreButton.parentElement.removeChild(loadMoreButton)
+    } else {
+        loadPokemonAbilities(offset, limit)
+    }
+})
 */
+
+
+
+

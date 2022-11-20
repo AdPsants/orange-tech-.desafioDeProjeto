@@ -148,6 +148,21 @@
     border-radius: 1rem;
 }
 
+.abilities {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+.abilities .number {
+    color: #000;
+    opacity: .3;
+    text-align: right;
+}
+
 @media screen and (min-width: 396px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
