@@ -45,23 +45,29 @@ loadMoreButton.addEventListener('click', () => {
     }
 })
 
+
+
 function sumir(){
     function convertPokemonFullToLi (pokemon) {
         return `
             <li class="${pokemon.type} abilities" >
                 <span class="number">#${pokemon.number}</span>
-                <span>${pokemon.name}</span>
+                <span class="name">${pokemon.name}</span>
                 <div>
                     <ol>
                         ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                     </ol>
-                    <img src="${pokemon.photo}" alt="${pokemon.name}">
+                    <img src="${pokemon.photo}" alt="${pokemon.name}">    
                 </div>
+            </li>
+            <li  class="class="${pokemon.type} abilities" style="border: 1px solid #000; border-radius: 5px;">    
                 <div class="">
-                    <ol class="">
-                       <span>Altura: ${pokemon.height} </span>
-                       <span>Luta:  ${pokemon.weight}</span>
-                        <span>Habilidades:  ${pokemon.abilities}<?span>
+                    <ol>
+                        <li>
+                            <span>Altura: ${pokemon.height} cm </span><br>
+                            <span>Luta:  ${pokemon.weight}</span><br>
+                            <span>Habilidades:  ${pokemon.abilities}</span>
+                        </li>
                     </ol>
                 </div>
             </li>
@@ -77,6 +83,8 @@ function sumir(){
     
     loadPokemonAbilities(offset, limit)
 }
+
+
 /*
 loadMoreButton.addEventListener('click', () => {
     offset += limit
