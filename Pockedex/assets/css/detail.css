@@ -21,6 +21,7 @@
     padding: 0.5rem;
     border-radius: 1rem;
     height: 90%;
+    background-color: #ff0000;
 }
 
 .pokemon .header{
@@ -37,6 +38,7 @@
 .header .number{
     color: #000;
     font-size: 1.5rem;
+    text-align: right;
 }
 
 .pokemon .name{
@@ -46,6 +48,7 @@
     color: #000;
     margin-bottom:0.20rem ;
     text-transform: capitalize;
+    text-align: center;
 }
 
 .pokemon .detail{
@@ -53,8 +56,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
-
 }
 
 .pokemon .detail .types{
@@ -97,6 +98,11 @@
 .details .infoList{
     list-style: none;
     font-size: 1.5rem;
+}
+.details .infoList .infoDetail{
+    list-style: none;
+    font-size: 1.5rem;
+    line-height: 60px;
 }
 
 .descriptionText{
