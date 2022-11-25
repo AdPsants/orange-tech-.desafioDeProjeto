@@ -12,11 +12,10 @@ const pokemonList = document.getElementById('pokemonList');
 function loadPokemonItenstoDetails(id) {
     console.log(id)
     getPokemon(id).then((pokemon) => {
-        pokemonList.innerHTML =  `<div class="pokemon ${pokemon.type+'-background'}">
+        pokemonList.innerHTML =  `<div class="pokemon ${pokemon.type}">
             <div class="header">
                 <span class="number">#${pokemon.number}</span>
             </div>
-            <span class="name">${pokemon.name}</span>
             <div class="detail">
                 <ol class="types">
                 ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
@@ -24,6 +23,7 @@ function loadPokemonItenstoDetails(id) {
             </div>
             <img src="${pokemon.photo}"
             alt="${pokemon.name}">
+            <span class="name">${pokemon.name}</span>
             <div class="details">
                 <h2>Info</h2>
                 <ol class="infoList">
